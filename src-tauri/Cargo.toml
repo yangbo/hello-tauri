@@ -2,8 +2,8 @@
 name = "hello-tauri"
 version = "0.0.0"
 description = "A Tauri App"
-authors = ["you"]
-license = ""
+authors = ["Bob Yang"]
+license = "Telecwin License"
 repository = ""
 edition = "2021"
 rust-version = "1.57"

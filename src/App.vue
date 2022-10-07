@@ -2,6 +2,11 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import Greet from "./components/Greet.vue";
+import OpenFile from "./components/OpenFile.vue";
+
+// disable 右键菜单
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 </script>
 
 <template>
@@ -36,8 +41,14 @@ import Greet from "./components/Greet.vue";
         >rust-analyzer</a
       >
     </p>
+    <p>
+      <a href="https://webglsamples.org/">webgl 例子</a> +
+      <a href="https://map.baidu.com">百度地图</a> +
+      
+    </p>
 
     <Greet />
+    <OpenFile />
   </div>
 </template>
 
