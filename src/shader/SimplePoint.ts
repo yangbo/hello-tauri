@@ -1,4 +1,4 @@
-// 定点着色器代码
+// 顶点着色器代码
 export const vertexShaderCode = `
 void main()
 {
