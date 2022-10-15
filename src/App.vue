@@ -17,6 +17,9 @@ document.addEventListener('contextmenu', event => event.preventDefault());
           <router-link to="/test-rust" v-slot="props" custom>
             <b-nav-item :active=props.isActive @click="props.navigate">Rust测试</b-nav-item>
           </router-link>
+          <router-link to="/webgl" v-slot="props" custom>
+            <b-nav-item :active=props.isActive @click="props.navigate">WebGL学习实践</b-nav-item>
+          </router-link>
         </b-nav>
       </b-col>
     </b-row>
@@ -32,11 +35,13 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 </template>
 
 <style scoped>
-.logo.vite:hover {
-  filter: drop-shadow(0 0 2em #747bff);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #249b73);
+/* 不让选中文本 */
+body,* {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 </style>
