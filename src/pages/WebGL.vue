@@ -13,10 +13,10 @@
 </template>
 
 <script setup lang="ts">
-import { main } from '@popperjs/core';
 import { BCol, BContainer, BRow } from 'bootstrap-vue-3';
 import { onMounted, ref } from 'vue';
 
+// 定点着色器代码
 const vertexShaderCode = `
 void main()
 {
@@ -25,6 +25,7 @@ void main()
 }
 `;
 
+// 片元着色器代码
 const fragShaderCode = `
 void main()
 {
@@ -78,12 +79,11 @@ onMounted(() => {
       // first，代表从第几个点开始绘制。
       // count，代表绘制的点的数量。
       gl.drawArrays(gl.POINTS, 0, 1);
-
     } else {
       console.log("不能创建 webgl context!");
     }
   } else {
-    console.log("没有 #webgl-canvas canvas 元素!");
+    console.log("没有 canvas 元素!");
   }
 });
 
