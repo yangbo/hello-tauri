@@ -14,3 +14,26 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+
+## 添加 vue3 路由
+
+参考
+[introduction-to-vue-router](https://vueschool.io/lessons/introduction-to-vue-router-4) 和 
+[router doc](https://router.vuejs.org/zh/installation.html)
+来做。
+
+关键步骤有：
+
+1. 添加 router/index.ts 模块，返回 Router 对象
+2. 删除 package.lock 文件，用 yarn 重新更新依赖
+3. 在 main.ts 中写入下列代码，让 app.use(router)
+```js
+import { createApp } from "vue";
+import "./style.css";
+import VueRouter from "vue-router";
+import {router} from './router'
+import AppVue from "./App.vue";
+
+const app = createApp(AppVue);
+app.use(router).mount("#app");
+```

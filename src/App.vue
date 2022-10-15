@@ -1,9 +1,4 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import Greet from "./components/Greet.vue";
-import OpenFile from "./components/OpenFile.vue";
-
 // disable 右键菜单
 document.addEventListener('contextmenu', event => event.preventDefault());
 
@@ -11,44 +6,16 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 <template>
   <div class="container">
-    <h1>Welcome to Tauri!</h1>
-
     <div class="row">
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo vite" alt="Vite logo" />
-      </a>
-      <a href="https://tauri.app" target="_blank">
-        <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-      </a>
+      <ul>
+        <router-link to="/" tag="li">首页</router-link>
+        <router-link to="/test-rust" tag="li">Rust测试</router-link>
+      </ul>
     </div>
 
-    <p>Click on the Tauri, Vite, and Vue logos to learn more.</p>
-
-    <p>
-      Recommended IDE setup:
-      <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-      +
-      <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-      +
-      <a href="https://github.com/tauri-apps/tauri-vscode" target="_blank"
-        >Tauri</a
-      >
-      +
-      <a href="https://github.com/rust-lang/rust-analyzer" target="_blank"
-        >rust-analyzer</a
-      >
-    </p>
-    <p>
-      <a href="https://webglsamples.org/">webgl 例子</a> +
-      <a href="https://map.baidu.com">百度地图</a> +
-      
-    </p>
-
-    <Greet />
-    <OpenFile />
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
   </div>
 </template>
 
