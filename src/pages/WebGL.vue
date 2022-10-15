@@ -19,6 +19,7 @@ import { vertexShaderCode, fragShaderCode } from '../shader/SimplePoint';
 
 // 使用 ref 应用 <canvas/> 元素
 const canvasEl = ref()
+// 必须在 DOM 挂载完成后才能进行渲染，否则找不到 canvas 对象
 onMounted(() => {
   // 编译 shader program
   // let canvas = document.getElementById("webgl-canvas") as HTMLCanvasElement;
@@ -26,6 +27,12 @@ onMounted(() => {
   glRender(canvas, vertexShaderCode, fragShaderCode);
 });
 
+/**
+ * 进行 webgl 渲染
+ * @param canvas canvas HTML 元素对象
+ * @param vertexShaderCode 定点着色器代码
+ * @param fragShaderCode 片元着色器代码
+ */
 function glRender(canvas: HTMLCanvasElement, vertexShaderCode: string, fragShaderCode: string) {
   if (!canvas) {
     console.log("没有 canvas 元素!");
