@@ -12,7 +12,7 @@
         "args": [
           "build",
           "--manifest-path=./src-tauri/Cargo.toml",
-          // 就不会启动内嵌的 web server 了，依赖外部 task 的 server 提供 http://localhost:1420/ 服务
+          // 就不会启动内嵌的 web server 了，依赖外部 task 的 server 提供 http://localhost:2420/ 服务
           "--no-default-features"
         ],
         "initCommands": [
